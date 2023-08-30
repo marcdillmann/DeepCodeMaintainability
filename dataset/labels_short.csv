@@ -1,0 +1,2 @@
+"projectname","packageandclass","path","readability","understandability","complexity","modularization","overall"
+"aoi","artofillusion.animation.ActorEditorWindow","aoi\sourcefiles\ArtOfIllusion\src\artofillusion\animation\ActorEditorWindow.java","{4.38897e-007,0.848266,0.151734,3.13027e-008}","{4.80515e-006,0.165522,0.834105,0.000368564}","{0.0384024,0.242482,0.719054,6.09142e-005}","{0.000933063,0.754034,0.245033,2.1247e-008}","{2.81463e-008,0.237515,0.762485,2.48766e-007}"

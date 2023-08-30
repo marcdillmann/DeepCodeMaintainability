@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-core-diagrams-deployment2/src/org/argouml/deployment2/diagram
+END
+UMLDeploymentDiagram.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-core-diagrams-deployment2/src/org/argouml/deployment2/diagram/UMLDeploymentDiagram.java
+END
+DeploymentDiagramGraphModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-deployment2/src/org/argouml/deployment2/diagram/DeploymentDiagramGraphModel.java
+END
+FigPort.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-deployment2/src/org/argouml/deployment2/diagram/FigPort.java
+END
+FigNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-deployment2/src/org/argouml/deployment2/diagram/FigNode.java
+END
+DeploymentDiagramFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-deployment2/src/org/argouml/deployment2/diagram/DeploymentDiagramFactory.java
+END

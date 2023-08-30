@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/activity_graphs
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/argouml/!svn/ver/19882/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/activity_graphs/.gitignore
+END
+UMLActionSynchCheckBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/argouml/!svn/ver/17883/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/activity_graphs/UMLActionSynchCheckBox.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/argouml/!svn/ver/14404/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/activity_graphs/package.html
+END
+ActionSetSynch.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/activity_graphs/ActionSetSynch.java
+END
+ActionAddEventAsTrigger.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/activity_graphs/ActionAddEventAsTrigger.java
+END
+ActionNewEntryCallAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/activity_graphs/ActionNewEntryCallAction.java
+END

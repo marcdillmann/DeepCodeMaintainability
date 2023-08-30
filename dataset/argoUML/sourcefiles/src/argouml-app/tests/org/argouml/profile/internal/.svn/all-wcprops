@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/tests/org/argouml/profile/internal
+END
+TestProfileManagerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/argouml/!svn/ver/18256/trunk/src/argouml-app/tests/org/argouml/profile/internal/TestProfileManagerImpl.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/argouml/!svn/ver/17806/trunk/src/argouml-app/tests/org/argouml/profile/internal/package.html
+END
+TestDependencyResolver.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/argouml/!svn/ver/17994/trunk/src/argouml-app/tests/org/argouml/profile/internal/TestDependencyResolver.java
+END
+TestFormatingStrategyUML.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/tests/org/argouml/profile/internal/TestFormatingStrategyUML.java
+END

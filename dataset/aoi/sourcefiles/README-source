@@ -1,0 +1,77 @@
+Art of Illusion v2.9.2
+
+Copyright 1999-2012 by Peter Eastman
+
+1. Instructions
+
+The Java classes which make up Art of Illusion are packaged into several
+.jar files: ArtOfIllusion.jar, which contains the main program, and various 
+plugin files, which must be placed in the Plugins directory.  The source
+files are organized in the same way.  There is one directory corresponding to
+each .jar file, containing the source code for the classes which go into that
+file.
+
+You will also find an XML file corresponding to each .jar file.  These
+are build scripts for use with the Ant build tool (available from
+http://jakarta.apache.org/ant).  To build each file, simply invoke Ant on the
+corresponding script.  For example,
+
+ant -buildfile ArtOfIllusion.xml
+
+You must build ArtOfIllusion.jar before building any of the plugins, since
+their build scripts need to reference it when compiling.  The plugins can
+be built in any order.  The scripts will automatically put the finished .jar
+files into the correct locations.
+
+Further information about Art of Illusion can be found at:
+
+http://www.artofillusion.org
+
+2. License
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free
+Software Foundation; either version 2 of the License, or (at your option)
+any later version. 
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details. 
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc., 59
+Temple Place - Suite 330, Boston, MA 02111-1307, USA.  It can also be
+found on the Internet at http://www.fsf.org/copyleft/gpl.html.	
+
+3. Other licenses
+
+The lib directory contains various libraries used by Art of Illusion.  They are
+distributed under a variety of licenses:
+
+- beanshell.jar contains the classes for the Beanshell scripting language.  It
+is distributed under the Lesser Gnu General Public License (LGPL).  The source
+code is available from http://www.beanshell.org.
+
+- Buoy.jar and Buoyx.jar contain the Buoy user interface library, which is in
+the public domain.  The source code can be found at http://buoy.sourceforge.net.
+
+- jogl.jar and gluegen-rt.jar contain the classes for Jogl, an OpenGL binding
+for Java.  It is distributed under the BSD license.  These classes are not
+actually added to ArtOfIllusion.jar, and are included only for use during
+compilation.  To actually use OpenGL, Jogl must be included in the classpath
+when the program is run, and the appropriate platform-specific Jogl native
+library must be included in the library search path.  Jogl can be found at
+https://jogl.dev.java.net.
+
+- Jama-1.0.2.jar contains the Java Matrix (JAMA) package, which is in the public
+domain.  The source code can be found at http://math.nist.gov/javanumerics/jama.
+
+- svgSalamander.jar contains the SVG Salamander library for processing SVG
+images.  It is distributed under the Lesser Gnu General Public License (LGPL).
+The source code is available from http://svgsalamander.java.net.
+
+- QuickTimeWriter.jar contains Werner Randelshofer's QuickTime movie encoder.
+It is distributed under the Creative Commons Attribution 3.0 license.  The
+source code can be found at
+http://www.randelshofer.ch/blog/2010/10/writing-quicktime-movies-in-pure-java.

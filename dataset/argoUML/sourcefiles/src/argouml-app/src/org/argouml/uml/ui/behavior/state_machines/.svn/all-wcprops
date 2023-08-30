@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines
+END
+ActionNewChangeEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/argouml/!svn/ver/17894/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionNewChangeEvent.java
+END
+ActionNewSimpleState.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/argouml/!svn/ver/19433/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionNewSimpleState.java
+END
+ActionNewFinalState.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/argouml/!svn/ver/19433/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionNewFinalState.java
+END
+ActionNewTransition.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/argouml/!svn/ver/19433/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionNewTransition.java
+END
+PopupMenuNewEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/argouml/!svn/ver/19388/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/PopupMenuNewEvent.java
+END
+UMLChangeExpressionModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/UMLChangeExpressionModel.java
+END
+ButtonActionNewGuard.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ButtonActionNewGuard.java
+END
+ActionNewPseudoState.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/argouml/!svn/ver/19433/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionNewPseudoState.java
+END
+ActionNewTimeEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/argouml/!svn/ver/17894/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionNewTimeEvent.java
+END
+ActionAddSignalsToSignalEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/argouml/!svn/ver/17894/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionAddSignalsToSignalEvent.java
+END
+ActionNewGuard.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/argouml/!svn/ver/19433/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionNewGuard.java
+END
+ActionNewCompositeState.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/argouml/!svn/ver/19433/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionNewCompositeState.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/argouml/!svn/ver/14404/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/package.html
+END
+ActionNewCallEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/argouml/!svn/ver/17894/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionNewCallEvent.java
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/argouml/!svn/ver/19882/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/.gitignore
+END
+ActionNewStubState.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/argouml/!svn/ver/19433/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionNewStubState.java
+END
+ActionNewSignalEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/argouml/!svn/ver/17894/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionNewSignalEvent.java
+END
+ActionNewSubmachineState.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/argouml/!svn/ver/19433/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionNewSubmachineState.java
+END
+ActionNewEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/argouml/!svn/ver/17894/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionNewEvent.java
+END
+UMLSynchStateBoundDocument.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/UMLSynchStateBoundDocument.java
+END
+ActionAddEventAsDeferrableEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionAddEventAsDeferrableEvent.java
+END
+ActionNewSynchState.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/argouml/!svn/ver/19433/trunk/src/argouml-app/src/org/argouml/uml/ui/behavior/state_machines/ActionNewSynchState.java
+END

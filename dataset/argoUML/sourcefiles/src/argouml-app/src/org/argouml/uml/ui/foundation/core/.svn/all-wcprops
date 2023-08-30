@@ -1,0 +1,305 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/argouml/!svn/ver/14404/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/package.html
+END
+UMLStructuralFeatureChangeabilityRadioButtonPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLStructuralFeatureChangeabilityRadioButtonPanel.java
+END
+UMLDiagramNameDocument.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLDiagramNameDocument.java
+END
+ActionAddDataType.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionAddDataType.java
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/argouml/!svn/ver/19882/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/.gitignore
+END
+ActionSetAssociationEndNavigable.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetAssociationEndNavigable.java
+END
+ActionNewParameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionNewParameter.java
+END
+ActionSetBehavioralFeatureQuery.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetBehavioralFeatureQuery.java
+END
+UMLAssociationEndTargetScopeCheckbox.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLAssociationEndTargetScopeCheckbox.java
+END
+UMLModelElementVisibilityRadioButtonPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/argouml/!svn/ver/17996/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLModelElementVisibilityRadioButtonPanel.java
+END
+ActionSetGeneralizableElementRoot.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetGeneralizableElementRoot.java
+END
+UMLParameterDirectionKindRadioButtonPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLParameterDirectionKindRadioButtonPanel.java
+END
+UMLAssociationEndNavigableCheckBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLAssociationEndNavigableCheckBox.java
+END
+ActionAddLiteral.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionAddLiteral.java
+END
+UMLBehavioralFeatureQueryCheckBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLBehavioralFeatureQueryCheckBox.java
+END
+ActionSetAssociationEndOrdering.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetAssociationEndOrdering.java
+END
+UMLGeneralizableElementRootCheckBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLGeneralizableElementRootCheckBox.java
+END
+ActionSetFeatureOwnerScope.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetFeatureOwnerScope.java
+END
+ActionSetClassActive.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetClassActive.java
+END
+ActionSetGeneralizableElementAbstract.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetGeneralizableElementAbstract.java
+END
+ActionSetChangeability.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetChangeability.java
+END
+ActionNewClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionNewClass.java
+END
+UMLOperationSpecificationDocument.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLOperationSpecificationDocument.java
+END
+ActionSetAssociationEndTargetScope.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetAssociationEndTargetScope.java
+END
+ActionSetGeneralizableElementLeaf.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetGeneralizableElementLeaf.java
+END
+UMLAssociationEndOrderingCheckBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLAssociationEndOrderingCheckBox.java
+END
+ActionAddClientDependencyAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/argouml/!svn/ver/19372/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionAddClientDependencyAction.java
+END
+UMLOperationConcurrencyRadioButtonPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLOperationConcurrencyRadioButtonPanel.java
+END
+ActionAddAssociationSpecification.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionAddAssociationSpecification.java
+END
+UMLFeatureOwnerScopeCheckBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLFeatureOwnerScopeCheckBox.java
+END
+UMLDiscriminatorNameDocument.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLDiscriminatorNameDocument.java
+END
+UMLClassActiveCheckBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLClassActiveCheckBox.java
+END
+UMLGeneralizableElementAbstractCheckBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLGeneralizableElementAbstractCheckBox.java
+END
+ActionNewModelElementConstraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionNewModelElementConstraint.java
+END
+UMLModelElementNameDocument.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLModelElementNameDocument.java
+END
+ActionSetOperationConcurrencyKind.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetOperationConcurrencyKind.java
+END
+UMLGeneralizableElementLeafCheckBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLGeneralizableElementLeafCheckBox.java
+END
+ActionSetModelElementVisibility.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetModelElementVisibility.java
+END
+ActionAddEnumeration.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionAddEnumeration.java
+END
+ActionSetStructuralFeatureTargetScope.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetStructuralFeatureTargetScope.java
+END
+UMLAssociationEndChangeabilityRadioButtonPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLAssociationEndChangeabilityRadioButtonPanel.java
+END
+ActionSetParameterDirectionKind.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetParameterDirectionKind.java
+END
+ActionSetElementOwnershipSpecification.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionSetElementOwnershipSpecification.java
+END
+ActionAddOperation.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionAddOperation.java
+END
+ActionAddSupplierDependencyAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/argouml/!svn/ver/19372/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionAddSupplierDependencyAction.java
+END
+ActionNewInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionNewInterface.java
+END
+ActionNewInnerClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionNewInnerClass.java
+END
+ActionAddEnumerationLiteral.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionAddEnumerationLiteral.java
+END
+ActionAddAttribute.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/ActionAddAttribute.java
+END
+UMLStructuralFeatureTargetScopeCheckBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/argouml/!svn/ver/17897/trunk/src/argouml-app/src/org/argouml/uml/ui/foundation/core/UMLStructuralFeatureTargetScopeCheckBox.java
+END

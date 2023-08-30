@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/tests/org/argouml/util
+END
+ThreadHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/argouml/!svn/ver/17802/trunk/src/argouml-app/tests/org/argouml/util/ThreadHelper.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/argouml/!svn/ver/17200/trunk/src/argouml-app/tests/org/argouml/util/package.html
+END
+CheckResourceBundle.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/tests/org/argouml/util/CheckResourceBundle.java
+END
+TestMyTokenizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/argouml/!svn/ver/17802/trunk/src/argouml-app/tests/org/argouml/util/TestMyTokenizer.java
+END
+CheckMain.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/argouml/!svn/ver/17802/trunk/src/argouml-app/tests/org/argouml/util/CheckMain.java
+END

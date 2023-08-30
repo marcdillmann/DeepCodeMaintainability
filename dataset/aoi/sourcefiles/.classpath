@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="ArtOfIllusion/src"/>
+	<classpathentry kind="src" path="Tests/src"/>
+	<classpathentry kind="src" path="Renderers/src"/>
+	<classpathentry kind="lib" path="HelpPlugin/lib/helpgui-1.1b.jar"/>
+	<classpathentry kind="lib" path="HelpPlugin/lib/jhall.jar"/>
+	<classpathentry kind="lib" path="HelpPlugin/lib/jhelpaction.jar"/>
+	<classpathentry kind="lib" path="HelpPlugin/lib/pircbot.jar"/>
+	<classpathentry kind="lib" path="lib/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="lib/Buoy.jar"/>
+	<classpathentry kind="lib" path="lib/Buoyx.jar"/>
+	<classpathentry kind="lib" path="lib/gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="lib/groovy-all-2.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/Jama-1.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/jogl.jar"/>
+	<classpathentry kind="lib" path="lib/QuickTimeWriter.jar"/>
+	<classpathentry kind="lib" path="lib/svgSalamander.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

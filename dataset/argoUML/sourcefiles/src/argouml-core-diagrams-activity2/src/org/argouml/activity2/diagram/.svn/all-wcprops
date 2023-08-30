@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram
+END
+FigActivityEdge.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/FigActivityEdge.java
+END
+ActivityDiagramRenderer.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/ActivityDiagramRenderer.java
+END
+ActivityDiagramFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/ActivityDiagramFactory.java
+END
+DiagramNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/DiagramNode.java
+END
+FigNamedRRect.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/FigNamedRRect.java
+END
+DiagramElement.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/DiagramElement.java
+END
+FigGravityPoly.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/FigGravityPoly.java
+END
+FigCompartment.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/FigCompartment.java
+END
+StereotypeDisplayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/StereotypeDisplayer.java
+END
+FigNameCompartment.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/FigNameCompartment.java
+END
+FigNotation.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/FigNotation.java
+END
+diagram.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/argouml/!svn/ver/18856/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/diagram.xml
+END
+ActivityDiagramGraphModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/ActivityDiagramGraphModel.java
+END
+FigBaseEdge.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/FigBaseEdge.java
+END
+DiagramElementBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/DiagramElementBuilder.java
+END
+ModePlaceDiagramElement.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/ModePlaceDiagramElement.java
+END
+FigNamedRect.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/FigNamedRect.java
+END
+FigComposite.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/FigComposite.java
+END
+FigAcceptEventPoly.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/FigAcceptEventPoly.java
+END
+elements.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/argouml/!svn/ver/19120/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/elements.xml
+END
+FigBasePresentation.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/FigBasePresentation.java
+END
+NameDisplayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/NameDisplayer.java
+END
+BaseDiagram.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/BaseDiagram.java
+END
+UMLActivityDiagram.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/UMLActivityDiagram.java
+END
+CreateDiagramElementAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/CreateDiagramElementAction.java
+END
+FigNamedConcavePentagon.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/FigNamedConcavePentagon.java
+END
+FigNamedPentagon.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/FigNamedPentagon.java
+END
+FigBaseNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-core-diagrams-activity2/src/org/argouml/activity2/diagram/FigBaseNode.java
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/use_case
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/argouml/!svn/ver/19882/trunk/src/argouml-app/src/org/argouml/uml/diagram/use_case/.gitignore
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/argouml/!svn/ver/14404/trunk/src/argouml-app/src/org/argouml/uml/diagram/use_case/package.html
+END
+UseCaseDiagramGraphModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/use_case/UseCaseDiagramGraphModel.java
+END

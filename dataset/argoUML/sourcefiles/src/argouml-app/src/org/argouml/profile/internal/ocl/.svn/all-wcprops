@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/profile/internal/ocl
+END
+CompositeModelInterpreter.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/argouml/!svn/ver/17836/trunk/src/argouml-app/src/org/argouml/profile/internal/ocl/CompositeModelInterpreter.java
+END
+ComputeDesignMaterials.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/profile/internal/ocl/ComputeDesignMaterials.java
+END
+OclExpressionEvaluator.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/argouml/!svn/ver/17836/trunk/src/argouml-app/src/org/argouml/profile/internal/ocl/OclExpressionEvaluator.java
+END
+OclInterpreter.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/argouml/!svn/ver/17836/trunk/src/argouml-app/src/org/argouml/profile/internal/ocl/OclInterpreter.java
+END
+ContextApplicable.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/argouml/!svn/ver/17836/trunk/src/argouml-app/src/org/argouml/profile/internal/ocl/ContextApplicable.java
+END
+EvaluateInvariant.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/argouml/!svn/ver/17836/trunk/src/argouml-app/src/org/argouml/profile/internal/ocl/EvaluateInvariant.java
+END
+CrOCL.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/argouml/!svn/ver/17836/trunk/src/argouml-app/src/org/argouml/profile/internal/ocl/CrOCL.java
+END
+LambdaEvaluator.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/argouml/!svn/ver/17836/trunk/src/argouml-app/src/org/argouml/profile/internal/ocl/LambdaEvaluator.java
+END
+InvalidOclException.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/argouml/!svn/ver/17836/trunk/src/argouml-app/src/org/argouml/profile/internal/ocl/InvalidOclException.java
+END
+ComputeTriggers.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/argouml/!svn/ver/17836/trunk/src/argouml-app/src/org/argouml/profile/internal/ocl/ComputeTriggers.java
+END
+ModelInterpreter.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/argouml/!svn/ver/17836/trunk/src/argouml-app/src/org/argouml/profile/internal/ocl/ModelInterpreter.java
+END
+DefaultOclEvaluator.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/profile/internal/ocl/DefaultOclEvaluator.java
+END
+EvaluateExpression.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/profile/internal/ocl/EvaluateExpression.java
+END

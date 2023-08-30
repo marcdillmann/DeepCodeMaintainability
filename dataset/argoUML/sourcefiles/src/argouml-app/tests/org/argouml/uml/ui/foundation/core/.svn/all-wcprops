@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/argouml/!svn/ver/19626/trunk/src/argouml-app/tests/org/argouml/uml/ui/foundation/core
+END
+TestUMLModelElementNameDocument.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/argouml/!svn/ver/17799/trunk/src/argouml-app/tests/org/argouml/uml/ui/foundation/core/TestUMLModelElementNameDocument.java
+END
+TestActionAddAttribute.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/argouml/!svn/ver/17799/trunk/src/argouml-app/tests/org/argouml/uml/ui/foundation/core/TestActionAddAttribute.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/argouml/!svn/ver/17200/trunk/src/argouml-app/tests/org/argouml/uml/ui/foundation/core/package.html
+END
+TestActionAddDependency.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/argouml/!svn/ver/17799/trunk/src/argouml-app/tests/org/argouml/uml/ui/foundation/core/TestActionAddDependency.java
+END
+TestUMLFeatureOwnerScopeCheckBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/argouml/!svn/ver/18976/trunk/src/argouml-app/tests/org/argouml/uml/ui/foundation/core/TestUMLFeatureOwnerScopeCheckBox.java
+END

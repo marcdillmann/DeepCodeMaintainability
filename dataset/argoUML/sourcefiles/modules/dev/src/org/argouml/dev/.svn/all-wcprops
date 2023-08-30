@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/argouml/!svn/ver/19906/trunk/modules/dev/src/org/argouml/dev
+END
+UndoLogPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/argouml/!svn/ver/17807/trunk/modules/dev/src/org/argouml/dev/UndoLogPanel.java
+END
+EventPumpInspectorPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/argouml/!svn/ver/17807/trunk/modules/dev/src/org/argouml/dev/EventPumpInspectorPanel.java
+END
+CallerListNodeBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/argouml/!svn/ver/17807/trunk/modules/dev/src/org/argouml/dev/CallerListNodeBuilder.java
+END
+DeveloperModule.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/argouml/!svn/ver/19245/trunk/modules/dev/src/org/argouml/dev/DeveloperModule.java
+END
+ModeInspectorPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/argouml/!svn/ver/19906/trunk/modules/dev/src/org/argouml/dev/ModeInspectorPanel.java
+END
+UndoManagerWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/argouml/!svn/ver/17807/trunk/modules/dev/src/org/argouml/dev/UndoManagerWrapper.java
+END
+TargetManagerPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/argouml/!svn/ver/17807/trunk/modules/dev/src/org/argouml/dev/TargetManagerPanel.java
+END
+MessageNodeBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/argouml/!svn/ver/17807/trunk/modules/dev/src/org/argouml/dev/MessageNodeBuilder.java
+END
+test.gif
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/argouml/!svn/ver/17454/trunk/modules/dev/src/org/argouml/dev/test.gif
+END
+DevActionFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/argouml/!svn/ver/17807/trunk/modules/dev/src/org/argouml/dev/DevActionFactory.java
+END

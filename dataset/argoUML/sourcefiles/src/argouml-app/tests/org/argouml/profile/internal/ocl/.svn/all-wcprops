@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/argouml/!svn/ver/17776/trunk/src/argouml-app/tests/org/argouml/profile/internal/ocl
+END
+TestCrOCL.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/argouml/!svn/ver/17776/trunk/src/argouml-app/tests/org/argouml/profile/internal/ocl/TestCrOCL.java
+END
+TestCrOCL2.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/argouml/!svn/ver/17776/trunk/src/argouml-app/tests/org/argouml/profile/internal/ocl/TestCrOCL2.java
+END
+TestDefaultOclEvaluator.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/argouml/!svn/ver/17776/trunk/src/argouml-app/tests/org/argouml/profile/internal/ocl/TestDefaultOclEvaluator.java
+END
+TestOclInterpreter.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/argouml/!svn/ver/17776/trunk/src/argouml-app/tests/org/argouml/profile/internal/ocl/TestOclInterpreter.java
+END

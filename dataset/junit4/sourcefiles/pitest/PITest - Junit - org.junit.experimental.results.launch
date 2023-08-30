@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/junit/pitest/lib/pitest-ant-0.32.jar"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.pitest.mutationtest.commandline.MutationCoverageReport"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="--reportDir pitest/reports/&#10;    --targetClasses org.junit.experimental.results*&#10;    --targetTests org.junit.tests.experimental.results*&#10;    --sourceDirs src/main/java/"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="junit"/>
+</launchConfiguration>

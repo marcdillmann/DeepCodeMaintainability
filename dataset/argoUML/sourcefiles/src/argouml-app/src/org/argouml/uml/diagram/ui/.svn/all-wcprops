@@ -1,0 +1,701 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/argouml/!svn/ver/19909/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui
+END
+ArgoFig.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/argouml/!svn/ver/19909/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ArgoFig.java
+END
+FigClassAssociationClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigClassAssociationClass.java
+END
+ArgoFigText.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/argouml/!svn/ver/17921/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ArgoFigText.java
+END
+FigOperationsCompartment.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigOperationsCompartment.java
+END
+FigSingleLineText.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigSingleLineText.java
+END
+AbstractActionRadioMenuItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/AbstractActionRadioMenuItem.java
+END
+FigTrace.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigTrace.java
+END
+ActionAddExistingEdge.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionAddExistingEdge.java
+END
+FigAttributesCompartment.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigAttributesCompartment.java
+END
+ActionStereotypeViewBigIcon.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionStereotypeViewBigIcon.java
+END
+FigAssociationClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/argouml/!svn/ver/19206/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigAssociationClass.java
+END
+ActionModifierActive.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionModifierActive.java
+END
+FigStereotypesGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigStereotypesGroup.java
+END
+ActionSetAddAssociationClassMode.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionSetAddAssociationClassMode.java
+END
+ModeCreateAssociationClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ModeCreateAssociationClass.java
+END
+FeaturesCompartmentContainer.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FeaturesCompartmentContainer.java
+END
+ArgoFigGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ArgoFigGroup.java
+END
+ModeCreateUsage.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ModeCreateUsage.java
+END
+FigAbstraction.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigAbstraction.java
+END
+ActionVisibilityProtected.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionVisibilityProtected.java
+END
+ActionModifierRoot.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionModifierRoot.java
+END
+FigDependency.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigDependency.java
+END
+PathItemPlacement.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/PathItemPlacement.java
+END
+ModeCreateAssociation.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ModeCreateAssociation.java
+END
+ActionSetPath.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionSetPath.java
+END
+AddExistingNodeCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/AddExistingNodeCommand.java
+END
+FigMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/argouml/!svn/ver/18558/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigMessage.java
+END
+FigNameWithAbstractAndBold.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigNameWithAbstractAndBold.java
+END
+FigKeyword.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigKeyword.java
+END
+StylePanelFigMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/StylePanelFigMessage.java
+END
+FigPermission.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigPermission.java
+END
+SelectionEdgeClarifiers.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/SelectionEdgeClarifiers.java
+END
+ActionNavigability.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionNavigability.java
+END
+SelectionMoveClarifiers.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/SelectionMoveClarifiers.java
+END
+ActionVisibilityPrivate.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionVisibilityPrivate.java
+END
+SelectionNodeClarifiers2.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/SelectionNodeClarifiers2.java
+END
+ModeLabelDrag.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ModeLabelDrag.java
+END
+ActionVisibilityPublic.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionVisibilityPublic.java
+END
+ActionAggregation.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionAggregation.java
+END
+PropPanelString.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/PropPanelString.java
+END
+SPFigEdgeModelElement.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/SPFigEdgeModelElement.java
+END
+FigCompartmentBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigCompartmentBox.java
+END
+StylePanelFigAssociationClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/argouml/!svn/ver/17924/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/StylePanelFigAssociationClass.java
+END
+FigAssociationEnd.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigAssociationEnd.java
+END
+FigUsage.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigUsage.java
+END
+ActionAddExistingNodes.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionAddExistingNodes.java
+END
+RadioAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/RadioAction.java
+END
+FigMultiLineText.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigMultiLineText.java
+END
+Clarifiable.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/Clarifiable.java
+END
+ActionVisibilityPackage.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionVisibilityPackage.java
+END
+ActionStereotypeViewTextual.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionStereotypeViewTextual.java
+END
+ModeCreateGeneralization.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ModeCreateGeneralization.java
+END
+InitDiagramAppearanceUI.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/InitDiagramAppearanceUI.java
+END
+ArgoModeCreateFigText.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ArgoModeCreateFigText.java
+END
+AbstractActionCheckBoxMenuItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/AbstractActionCheckBoxMenuItem.java
+END
+ModeCreateGraphEdge.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ModeCreateGraphEdge.java
+END
+ModeCreateCommentEdge.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ModeCreateCommentEdge.java
+END
+PathConvPercent2.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/PathConvPercent2.java
+END
+FigNameWithAbstract.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/argouml/!svn/ver/19509/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigNameWithAbstract.java
+END
+ActionMultiplicity.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionMultiplicity.java
+END
+FigTextGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigTextGroup.java
+END
+FigStereotype.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigStereotype.java
+END
+FigMultiLineTextWithBold.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigMultiLineTextWithBold.java
+END
+ActionAddMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionAddMessage.java
+END
+TabDiagram.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/TabDiagram.java
+END
+SettingsTabDiagramAppearance.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/SettingsTabDiagramAppearance.java
+END
+ActionAddExtensionPoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionAddExtensionPoint.java
+END
+ActionStereotypeViewSmallIcon.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionStereotypeViewSmallIcon.java
+END
+FigEdgePort.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigEdgePort.java
+END
+ActionAddAllClassesFromModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionAddAllClassesFromModel.java
+END
+FigEmptyRect.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigEmptyRect.java
+END
+SelectionClassifierBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/argouml/!svn/ver/19906/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/SelectionClassifierBox.java
+END
+ActionSaveDiagramToClipboard.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionSaveDiagramToClipboard.java
+END
+DiagramNameDocument.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/DiagramNameDocument.java
+END
+ActionRemoveFromDiagram.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionRemoveFromDiagram.java
+END
+ActionSetAddAssociationMode.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionSetAddAssociationMode.java
+END
+FigNodeModelElement.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigNodeModelElement.java
+END
+ModeCreateDependency.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ModeCreateDependency.java
+END
+ActionAddStereotype.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/argouml/!svn/ver/18882/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionAddStereotype.java
+END
+ModeLabelDragFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ModeLabelDragFactory.java
+END
+ActionEdgesDisplay.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionEdgesDisplay.java
+END
+ArgoFigUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ArgoFigUtil.java
+END
+ActionAddNote.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionAddNote.java
+END
+FigEdgeAssociationClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigEdgeAssociationClass.java
+END
+ActionCompartmentDisplay.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionCompartmentDisplay.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/argouml/!svn/ver/17200/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/package.html
+END
+FigCompartment.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigCompartment.java
+END
+ActionModifierAbstract.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionModifierAbstract.java
+END
+SelectionRerouteEdge.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/SelectionRerouteEdge.java
+END
+ModeCreatePermission.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ModeCreatePermission.java
+END
+UMLDiagram.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/UMLDiagram.java
+END
+ActionModifierLeaf.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionModifierLeaf.java
+END
+CompartmentFigText.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/CompartmentFigText.java
+END
+FigEdgeModelElement.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigEdgeModelElement.java
+END
+PropPanelDiagram.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/argouml/!svn/ver/18022/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/PropPanelDiagram.java
+END
+ModeAddToDiagram.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ModeAddToDiagram.java
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/argouml/!svn/ver/19882/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/.gitignore
+END
+StereotypeStyled.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/StereotypeStyled.java
+END
+ActionSetAddAssociationEndMode.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionSetAddAssociationEndMode.java
+END
+ModeCreateAssociationEnd.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ModeCreateAssociationEnd.java
+END
+ActionStereotypeView.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionStereotypeView.java
+END
+FigSingleLineTextWithNotation.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/argouml/!svn/ver/18859/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigSingleLineTextWithNotation.java
+END
+ActionAddConcurrentRegion.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionAddConcurrentRegion.java
+END
+ActionSetMode.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionSetMode.java
+END
+FigProfileIcon.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigProfileIcon.java
+END
+FigGeneralization.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigGeneralization.java
+END
+DnDJGraph.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/DnDJGraph.java
+END
+FigAssociation.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigAssociation.java
+END
+FigEnumLiteralsCompartment.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/argouml/!svn/ver/19354/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigEnumLiteralsCompartment.java
+END
+ActionAddAssociationRole.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionAddAssociationRole.java
+END
+ActionAddExistingNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/argouml/!svn/ver/19907/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionAddExistingNode.java
+END
+FigNodeAssociation.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/argouml/!svn/ver/18775/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigNodeAssociation.java
+END
+ActionSetAddCommentLinkMode.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionSetAddCommentLinkMode.java
+END
+ActionList.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/ActionList.java
+END
+FigExtensionPointsCompartment.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/argouml/!svn/ver/19614/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/FigExtensionPointsCompartment.java
+END
+StatusBarAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/argouml/!svn/ver/17865/trunk/src/argouml-app/src/org/argouml/uml/diagram/ui/StatusBarAdapter.java
+END

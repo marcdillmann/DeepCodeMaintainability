@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/argouml/!svn/ver/19882/trunk/src/argouml-app/src/org/argouml/uml/ui/model_management
+END
+ActionRemovePackageImport.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/argouml/!svn/ver/17893/trunk/src/argouml-app/src/org/argouml/uml/ui/model_management/ActionRemovePackageImport.java
+END
+ActionAddPackage.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/argouml/!svn/ver/17893/trunk/src/argouml-app/src/org/argouml/uml/ui/model_management/ActionAddPackage.java
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/argouml/!svn/ver/19882/trunk/src/argouml-app/src/org/argouml/uml/ui/model_management/.gitignore
+END
+ActionAddPackageImport.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/argouml/!svn/ver/17893/trunk/src/argouml-app/src/org/argouml/uml/ui/model_management/ActionAddPackageImport.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/argouml/!svn/ver/14404/trunk/src/argouml-app/src/org/argouml/uml/ui/model_management/package.html
+END
