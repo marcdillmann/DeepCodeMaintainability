@@ -10,7 +10,7 @@ output_directory = 'output'
 if __name__ == '__main__':
     if len(sys.argv) != 2:
         print("Usage: python main.py <model>")
-        print("Available models: 'GPT-2', 'Bloomz-560m', 'CodeBERTaTextGeneration', CodeBERTaFillMask")
+        print("Available models: 'GPT-2', 'Bloomz-560m', 'CodeBERTaTextGeneration', 'CodeBERTaFillMask'")
         sys.exit(1)
 
     model = sys.argv[1]
@@ -25,7 +25,7 @@ if __name__ == '__main__':
         approach = CodeBERTaFillMask(csv_file_path, output_directory)
     else:
         print("Model not recognized.")
-        print("Available models: 'GPT-2', 'Bloomz-560m', 'CodeBERTaTextGeneration', CodeBERTaFillMask")
+        print("Available models: 'GPT-2', 'Bloomz-560m', 'CodeBERTaTextGeneration', 'CodeBERTaFillMask'")
         sys.exit(1)
 
     approach.evaluate_files()
