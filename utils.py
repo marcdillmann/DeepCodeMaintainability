@@ -22,26 +22,62 @@ def read_csv(csv_file_path):
     df = pd.read_csv(csv_file_path)
 
     java_file_paths = []
+    readability_probabilities = []
+    understandability_probabilities = []
+    complexity_probabilities = []
+    modularization_probabilities = []
     overall_probabilities = []
     overall_binary_classifications = []
+    overall_highest_probability_index = []
 
     for index, row in df.iterrows():
         relative_path = row['path'].replace("\\", "/")
         java_file_path = os.path.join(csv_file_dir, relative_path)
         java_file_paths.append(java_file_path)
 
-        overall = row['overall']
+        # readability
+        readability = row['readability']
+        number_strings = readability.replace('{', '').replace('}', '').split(',')
+        probabilities = list(map(float, number_strings))
+        readability_probabilities.append(probabilities)
 
+        # understandability
+        understandability = row['understandability']
+        number_strings = understandability.replace('{', '').replace('}', '').split(',')
+        probabilities = list(map(float, number_strings))
+        understandability_probabilities.append(probabilities)
+
+        # complexity
+        complexity = row['complexity']
+        number_strings = complexity.replace('{', '').replace('}', '').split(',')
+        probabilities = list(map(float, number_strings))
+        complexity_probabilities.append(probabilities)
+
+        # modularization
+        modularization = row['modularization']
+        number_strings = modularization.replace('{', '').replace('}', '').split(',')
+        probabilities = list(map(float, number_strings))
+        modularization_probabilities.append(probabilities)
+
+        # overall
+        overall = row['overall']
         number_strings = overall.replace('{', '').replace('}', '').split(',')
         probabilities = list(map(float, number_strings))
         overall_probabilities.append(probabilities)
         index = np.argmax(probabilities)
-        binary_overall = False if index == 0 else True
-        overall_binary_classifications.append(binary_overall)
+        overall_highest_probability_index.append(index)
+        overall_binary = False if index == 0 else True
+        #overall_binary = False if index == 0 or index == 1 else True
+        overall_binary_classifications.append(overall_binary)
 
     results = {
         'java_file_paths': java_file_paths,
+        'readability_probabilities': readability_probabilities,
+        'understandability_probabilities': understandability_probabilities,
+        'complexity_probabilities': complexity_probabilities,
+        'modularization_probabilities': modularization_probabilities,
         'overall_probabilities': overall_probabilities,
+        'overall_highest_probability_index': overall_highest_probability_index,
         'overall_binary_classifications': overall_binary_classifications
     }
 
@@ -62,16 +98,24 @@ def write_csv(csv_data, cross_entropies, output_directory, model_name):
         csv_writer = csv.writer(csvfile)
 
         # Writing the header
-        csv_writer.writerow(["File", "Cross-Entropy", "Overall", "Overall Binary"])
+        csv_writer.writerow(["File", "Cross-Entropy", "Overall", "Overall Binary", "Overall Highest Probability Index",
+                             "Readability", "Understandability", "Complexity", "Modularization"])
 
         # Writing the data
         for i in range(len(csv_data['java_file_paths'])):
             file_path = csv_data['java_file_paths'][i]
-            entropy = cross_entropies[i]
+            #cross_entropy = cross_entropies[i].item()
+            cross_entropy = cross_entropies[i]
             overall = "{" + ",".join(map(str, csv_data['overall_probabilities'][i])) + "}"
-            binary = csv_data['overall_binary_classifications'][i]
+            overall_binary = csv_data['overall_binary_classifications'][i]
+            overall_index = csv_data['overall_highest_probability_index'][i]
+            readability = "{" + ",".join(map(str, csv_data['readability_probabilities'][i])) + "}"
+            understandability = "{" + ",".join(map(str, csv_data['understandability_probabilities'][i])) + "}"
+            complexity = "{" + ",".join(map(str, csv_data['complexity_probabilities'][i])) + "}"
+            modularization = "{" + ",".join(map(str, csv_data['modularization_probabilities'][i])) + "}"
 
-            csv_writer.writerow([file_path, entropy, overall, binary])
+            csv_writer.writerow([file_path, cross_entropy, overall, overall_binary, overall_index, readability,
+                                 understandability, complexity, modularization])
 
     print(f"Results written to {csv_file_path}")
 
