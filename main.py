@@ -9,7 +9,7 @@ csv_file_path = 'dataset/labels.csv'
 output_directory = 'output'
 
 avail_model_text = \
-    ("Available models: GPT2, CodeGPTSmallJava, CodeGPTJava, Codegen350m, Bloomz-560m, Bloomz-1b1, Bloomz-1b7, "
+    ("Available models: GPT-2, CodeGPTSmallJava, CodeGPTJava, Codegen350m, Bloomz-560m, Bloomz-1b1, Bloomz-1b7, "
      "Bloomz-3b, Bloomz-7b1, CodeLlama-7b, CodeLlama-13b, CodeBERTaTextGeneration, CodeBERTaFillMask")
 
 

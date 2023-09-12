@@ -111,7 +111,7 @@ class CodeMaintainabilityEvaluatorTextGeneration(CodeMaintainabilityEvaluator):
             total_number_of_tokens += number_of_tokens
 
         # Compute the average by scaling the loss in each iteration with the number of tokens and then divide by the
-        # total number of tokens so chunks with fewer tokens do not have an over pronounced influence
+        # total number of tokens so chunks with fewer tokens do not have an over-pronounced influence
         avg_loss = total_loss / total_number_of_tokens
         return avg_loss
 
@@ -120,6 +120,7 @@ class CodeMaintainabilityEvaluatorFillMask(CodeMaintainabilityEvaluator):
 
     def evaluate_cross_entropy_loss(self, code):
         total_loss = 0.0
+        total_number_of_tokens = 0
 
         # Tokenize the input code
         tokenized_input = self.tokenizer.tokenize(code)
@@ -134,7 +135,6 @@ class CodeMaintainabilityEvaluatorFillMask(CodeMaintainabilityEvaluator):
             end_idx = min((chunk_idx + 1) * self.max_length, num_tokens)
             chunk_tokens = tokenized_input[start_idx:end_idx]
 
-            chunk_loss = 0.0
             for i in range(len(chunk_tokens)):
                 # Create a copy of the tokens and mask the token at position i
                 masked_input = chunk_tokens.copy()
@@ -162,14 +162,11 @@ class CodeMaintainabilityEvaluatorFillMask(CodeMaintainabilityEvaluator):
 
                 # Compute loss
                 loss = self.loss_fn(mask_logits.unsqueeze(0), true_label)
-                chunk_loss += loss.item()
+                total_loss += loss.item()
+                total_number_of_tokens += 1
 
-            # Average the loss for this chunk
-            average_chunk_loss = chunk_loss / len(chunk_tokens)
-            total_loss += average_chunk_loss
-
-        # Average the loss across all chunks
-        average_loss = total_loss / num_chunks
+        # Average the loss across all tokens
+        average_loss = total_loss / total_number_of_tokens
         return average_loss
 
 
@@ -182,67 +179,85 @@ class CodeMaintainabilityEvaluatorFillMask(CodeMaintainabilityEvaluator):
 ######################
 class GPT2(CodeMaintainabilityEvaluatorTextGeneration):
     def __init__(self, csv_file_path, output_directory):
-        model = AutoModelForCausalLM.from_pretrained('gpt2-xl')
-        tokenizer = AutoTokenizer.from_pretrained('gpt2-xl')
-        super().__init__('GPT-2', model, tokenizer, csv_file_path, output_directory, 1024)
+        model_string = 'gpt2-xl'
+        max_input_size = 1024
+        model = AutoModelForCausalLM.from_pretrained(model_string)
+        tokenizer = AutoTokenizer.from_pretrained(model_string)
+        super().__init__('GPT-2', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 class CodeGPTSmallJava(CodeMaintainabilityEvaluatorTextGeneration):
     def __init__(self, csv_file_path, output_directory):
-        model = AutoModelForCausalLM.from_pretrained('microsoft/CodeGPT-small-java-adaptedGPT2')
-        tokenizer = AutoTokenizer.from_pretrained('microsoft/CodeGPT-small-java-adaptedGPT2')
-        super().__init__('CodeGPT-small-java', model, tokenizer, csv_file_path, output_directory, 1024)
+        model_string = 'microsoft/CodeGPT-small-java-adaptedGPT2'
+        max_input_size = 1024
+        model = AutoModelForCausalLM.from_pretrained(model_string)
+        tokenizer = AutoTokenizer.from_pretrained(model_string)
+        super().__init__('CodeGPT-small-java', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 class CodeGPTJava(CodeMaintainabilityEvaluatorTextGeneration):
     def __init__(self, csv_file_path, output_directory):
-        tokenizer = AutoTokenizer.from_pretrained("thmk/codegpt-java-10.2")
-        model = AutoModelForCausalLM.from_pretrained("thmk/codegpt-java-10.2")
-        super().__init__('CodeGPT-java-10.2', model, tokenizer, csv_file_path, output_directory, 1024)
+        model_string = 'thmk/codegpt-java-10.2'
+        max_input_size = 1024
+        tokenizer = AutoTokenizer.from_pretrained(model_string)
+        model = AutoModelForCausalLM.from_pretrained(model_string)
+        super().__init__('CodeGPT-java-10.2', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 class Codegen350m(CodeMaintainabilityEvaluatorTextGeneration):
     def __init__(self, csv_file_path, output_directory):
-        peft_config = PeftConfig.from_pretrained("ammarnasr/codegen-350M-mono-java")
+        model_string = 'ammarnasr/codegen-350M-mono-java'
+        max_input_size = 1024
+        peft_config = PeftConfig.from_pretrained(model_string)
         model = AutoModelForCausalLM.from_pretrained(peft_config.base_model_name_or_path)
-        model = PeftModel.from_pretrained(model, "ammarnasr/codegen-350M-mono-java")
+        model = PeftModel.from_pretrained(model, model_string)
         tokenizer = AutoTokenizer.from_pretrained(peft_config.base_model_name_or_path)
-        super().__init__('codegen-350m-mono-java', model, tokenizer, csv_file_path, output_directory, 1024)
+        super().__init__('codegen-350m-mono-java', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 class Bloomz560m(CodeMaintainabilityEvaluatorTextGeneration):
     def __init__(self, csv_file_path, output_directory):
-        model = AutoModelForCausalLM.from_pretrained('bigscience/bloomz-560m')
-        tokenizer = AutoTokenizer.from_pretrained('bigscience/bloomz-560m')
-        super().__init__('Bloomz-560m', model, tokenizer, csv_file_path, output_directory, 1024)
+        model_string = 'bigscience/bloomz-560m'
+        max_input_size = 1024
+        model = AutoModelForCausalLM.from_pretrained(model_string)
+        tokenizer = AutoTokenizer.from_pretrained(model_string)
+        super().__init__('Bloomz-560m', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 class Bloomz1b1(CodeMaintainabilityEvaluatorTextGeneration):
     def __init__(self, csv_file_path, output_directory):
-        model = AutoModelForCausalLM.from_pretrained('bigscience/bloomz-1b1')
-        tokenizer = AutoTokenizer.from_pretrained('bigscience/bloomz-1b1')
-        super().__init__('Bloomz-1b1', model, tokenizer, csv_file_path, output_directory, 1536)
+        model_string = 'bigscience/bloomz-1b1'
+        max_input_size = 1536
+        model = AutoModelForCausalLM.from_pretrained(model_string)
+        tokenizer = AutoTokenizer.from_pretrained(model_string)
+        super().__init__('Bloomz-1b1', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 class Bloomz1b7(CodeMaintainabilityEvaluatorTextGeneration):
     def __init__(self, csv_file_path, output_directory):
-        model = AutoModelForCausalLM.from_pretrained('bigscience/bloomz-1b7')
-        tokenizer = AutoTokenizer.from_pretrained('bigscience/bloomz-1b7')
-        super().__init__('Bloomz-1b7', model, tokenizer, csv_file_path, output_directory, 2048)
+        model_string = 'bigscience/bloomz-1b7'
+        max_input_size = 2048
+        model = AutoModelForCausalLM.from_pretrained(model_string)
+        tokenizer = AutoTokenizer.from_pretrained(model_string)
+        super().__init__('Bloomz-1b7', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 class Bloomz3b(CodeMaintainabilityEvaluatorTextGeneration):
     def __init__(self, csv_file_path, output_directory):
-        model = AutoModelForCausalLM.from_pretrained('bigscience/bloomz-3b')
-        tokenizer = AutoTokenizer.from_pretrained('bigscience/bloomz-3b')
-        super().__init__('Bloomz-3b', model, tokenizer, csv_file_path, output_directory, 2560)
+        model_string = 'bigscience/bloomz-3b'
+        max_input_size = 2560
+        model = AutoModelForCausalLM.from_pretrained(model_string)
+        tokenizer = AutoTokenizer.from_pretrained(model_string)
+        super().__init__('Bloomz-3b', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 class Bloomz7b1(CodeMaintainabilityEvaluatorTextGeneration):
     def __init__(self, csv_file_path, output_directory):
-        model = AutoModelForCausalLM.from_pretrained('bigscience/bloomz-7b1')
-        tokenizer = AutoTokenizer.from_pretrained('bigscience/bloomz-7b1')
-        super().__init__('Bloomz-1b1', model, tokenizer, csv_file_path, output_directory, 4096)
+        model_string = 'bigscience/bloomz-7b1'
+        max_input_size = 4096
+        model = AutoModelForCausalLM.from_pretrained(model_string)
+        tokenizer = AutoTokenizer.from_pretrained(model_string)
+        super().__init__('Bloomz-1b1', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 ########################
@@ -250,16 +265,20 @@ class Bloomz7b1(CodeMaintainabilityEvaluatorTextGeneration):
 ########################
 class CodeLlama7b(CodeMaintainabilityEvaluatorTextGeneration):
     def __init__(self, csv_file_path, output_directory):
-        model = AutoModelForCausalLM.from_pretrained('codellama/CodeLlama-7b-hf')
-        tokenizer = AutoTokenizer.from_pretrained('codellama/CodeLlama-7b-hf')
-        super().__init__('CodeLlama-7b-hf', model, tokenizer, csv_file_path, output_directory, 16384)
+        model_string = 'codellama/CodeLlama-7b-hf'
+        max_input_size = 16384
+        model = AutoModelForCausalLM.from_pretrained(model_string)
+        tokenizer = AutoTokenizer.from_pretrained(model_string)
+        super().__init__('CodeLlama-7b-hf', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 class CodeLlama13b(CodeMaintainabilityEvaluatorTextGeneration):
     def __init__(self, csv_file_path, output_directory):
-        model = AutoModelForCausalLM.from_pretrained('codellama/CodeLlama-13b-hf')
-        tokenizer = AutoTokenizer.from_pretrained('codellama/CodeLlama-13b-hf')
-        super().__init__('CodeLlama-13b-hf', model, tokenizer, csv_file_path, output_directory, 16384)
+        model_string = 'codellama/CodeLlama-13b-hf'
+        max_input_size = 16384
+        model = AutoModelForCausalLM.from_pretrained(model_string)
+        tokenizer = AutoTokenizer.from_pretrained(model_string)
+        super().__init__('CodeLlama-13b-hf', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 #######################
@@ -267,9 +286,11 @@ class CodeLlama13b(CodeMaintainabilityEvaluatorTextGeneration):
 #######################
 class CodeBERTaTextGeneration(CodeMaintainabilityEvaluatorTextGeneration):
     def __init__(self, csv_file_path, output_directory):
-        model = AutoModelForCausalLM.from_pretrained('huggingface/CodeBERTa-small-v1', is_decoder=True)
-        tokenizer = AutoTokenizer.from_pretrained('huggingface/CodeBERTa-small-v1')
-        super().__init__('CodeBERTaTextGeneration', model, tokenizer, csv_file_path, output_directory, 514)
+        model_string = 'huggingface/CodeBERTa-small-v1'
+        max_input_size = 514
+        model = AutoModelForCausalLM.from_pretrained(model_string, is_decoder=True)
+        tokenizer = AutoTokenizer.from_pretrained(model_string)
+        super().__init__('CodeBERTaTextGeneration', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 ############################
@@ -281,6 +302,8 @@ class CodeBERTaTextGeneration(CodeMaintainabilityEvaluatorTextGeneration):
 #######################
 class CodeBERTaFillMask(CodeMaintainabilityEvaluatorFillMask):
     def __init__(self, csv_file_path, output_directory):
-        model = AutoModelForMaskedLM.from_pretrained('huggingface/CodeBERTa-small-v1')
-        tokenizer = AutoTokenizer.from_pretrained('huggingface/CodeBERTa-small-v1')
-        super().__init__('CodeBERTaFillMask', model, tokenizer, csv_file_path, output_directory, 1024)
+        model_string = 'huggingface/CodeBERTa-small-v1'
+        max_input_size = 514
+        model = AutoModelForMaskedLM.from_pretrained(model_string)
+        tokenizer = AutoTokenizer.from_pretrained(model_string)
+        super().__init__('CodeBERTaFillMask', model, tokenizer, csv_file_path, output_directory, max_input_size)

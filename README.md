@@ -4,7 +4,7 @@ This repository provides an approach to evaluate the maintainability of code usi
 
 ## Features
 - Cross-Entropy Calculation: Evaluate code quality based on the computed cross-entropy.
-- Chunking Strategy: Efficiently process long code files by splitting them into manageable chunks.
+- Chunking Strategy: Efficiently process long code files by splitting them into chunks matching the maximum input size of the corresponding model.
 - CSV Output: Generate a detailed CSV report containing cross-entropy values and additional metrics for each evaluated file.
 - Support for Multiple Transformer Models: Easily plug-and-play different transformer models from the Hugging Face library.
 
@@ -15,10 +15,13 @@ git clone https://github.com/marcdillmann/DeepCodeMaintainability.git
 ```
 Navigate to the repository's directory:
 ```
-cd CodeQualityEvaluation
+cd DeepCodeMaintainability
 ```
-Install the required Python packages:
+Create a virtual Environment and install the required Python packages:
 ```
+pip install virtualenv
+virtualenv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -29,12 +32,18 @@ Run the main script:
 python main.py <model_name>
 ```
 Currently supported model names:
-- GPT-2 
-- Bloomz-560m 
-- CodeBERTaTextGeneration
-- CodeGPTSmallJava 
-- Codegen350m
+- GPT-2
+- CodeGPTSmallJava
 - CodeGPTJava
+- Codegen350m
+- Bloomz-560m
+- Bloomz-1b1
+- Bloomz-1b7
+- Bloomz-3b
+- Bloomz-7b1
+- CodeLlama-7b
+- CodeLlama-13b
+- CodeBERTaTextGeneration
 - CodeBERTaFillMask
 
 Once completed, check the output directory (or your specified directory) for the generated CSV report, which has the format 'Evaluation_modelname_timestamp'.
