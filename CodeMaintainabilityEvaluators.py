@@ -257,7 +257,7 @@ class Bloomz7b1(CodeMaintainabilityEvaluatorTextGeneration):
         max_input_size = 4096
         model = AutoModelForCausalLM.from_pretrained(model_string)
         tokenizer = AutoTokenizer.from_pretrained(model_string)
-        super().__init__('Bloomz-1b1', model, tokenizer, csv_file_path, output_directory, max_input_size)
+        super().__init__('Bloomz-7b1', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 ########################

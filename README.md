@@ -25,6 +25,13 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+To use the CodeLlama, please make sure to install transformers from main, because they are not yet included in the current pip transformers version:
+```
+pip install git+https://github.com/huggingface/transformers.git@main accelerate
+```
+
+
+
 ## Usage
 
 Run the main script:
