@@ -26,9 +26,9 @@ if __name__ == '__main__':
 
     if model == "gpt2-medium":
         approach = GPT2Medium(csv_file_path, output_directory)
-    if model == "gpt2-large":
+    elif model == "gpt2-large":
         approach = GPT2Large(csv_file_path, output_directory)
-    if model == "gpt2-xl":
+    elif model == "gpt2-xl":
         approach = GPT2XL(csv_file_path, output_directory)
     elif model == "CodeGPTSmallJava":
         approach = CodeGPTSmallJava(csv_file_path, output_directory)
