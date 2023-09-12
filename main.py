@@ -1,6 +1,7 @@
 import sys
-from CodeMaintainabilityEvaluators import (GPT2, Bloomz560m, CodeBERTaTextGeneration, CodeBERTaFillMask,
-                                           CodeGPTSmallJava, Codegen350m, CodeGPTJava)
+from CodeMaintainabilityEvaluators import (GPT2, CodeGPTSmallJava, CodeGPTJava, Codegen350m, Bloomz560m, Bloomz1b1,
+                                           Bloomz1b7, Bloomz3b, Bloomz7b1, CodeLlama7b, CodeLlama13b,
+                                           CodeBERTaTextGeneration, CodeBERTaFillMask)
 
 
 # Definitions
@@ -8,42 +9,46 @@ csv_file_path = 'dataset/labels.csv'
 output_directory = 'output'
 
 avail_model_text = \
-    ("Available models: 'GPT-2', 'Bloomz-560m', 'CodeBERTaTextGeneration', 'CodeBERTaFillMask', 'CodeGPTSmallJava',"
-     " 'Codegen350m', 'CodeGPTJava'")
+    ("Available models: GPT2, CodeGPTSmallJava, CodeGPTJava, Codegen350m, Bloomz-560m, Bloomz-1b1, Bloomz-1b7, "
+     "Bloomz-3b, Bloomz-7b1, CodeLlama-7b, CodeLlama-13b, CodeBERTaTextGeneration, CodeBERTaFillMask")
 
 
 if __name__ == '__main__':
 
-    if len(sys.argv) != 3:
-        print("Usage: python main.py <model> <use_chunks>")
+    if len(sys.argv) != 2:
+        print("Usage: python main.py <model>")
         print(avail_model_text)
-        print("Use chunks can be either True or False")
-        print("Example: python main.py GPT-2 False")
+        print("Example: python main.py GPT-2")
         sys.exit(1)
 
     model = sys.argv[1]
-    if sys.argv[2] == "True":
-        use_chunks = True
-    elif sys.argv[2] == "False":
-        use_chunks = False
-    else:
-        print("use_chunks has to be True or False")
-        sys.exit(1)
 
     if model == "GPT-2":
-        approach = GPT2(csv_file_path, output_directory, use_chunks)
-    elif model == "Bloomz-560m":
-        approach = Bloomz560m(csv_file_path, output_directory, use_chunks)
-    elif model == "CodeBERTaTextGeneration":
-        approach = CodeBERTaTextGeneration(csv_file_path, output_directory, use_chunks)
-    elif model == "CodeBERTaFillMask":
-        approach = CodeBERTaFillMask(csv_file_path, output_directory, use_chunks)
+        approach = GPT2(csv_file_path, output_directory)
     elif model == "CodeGPTSmallJava":
-        approach = CodeGPTSmallJava(csv_file_path, output_directory, use_chunks)
-    elif model == "Codegen350m":
-        approach = Codegen350m(csv_file_path, output_directory, use_chunks)
+        approach = CodeGPTSmallJava(csv_file_path, output_directory)
     elif model == "CodeGPTJava":
-        approach = CodeGPTJava(csv_file_path, output_directory, use_chunks)
+        approach = CodeGPTJava(csv_file_path, output_directory)
+    elif model == "Codegen350m":
+        approach = Codegen350m(csv_file_path, output_directory)
+    elif model == "Bloomz-560m":
+        approach = Bloomz560m(csv_file_path, output_directory)
+    elif model == "Bloomz-1b1":
+        approach = Bloomz1b1(csv_file_path, output_directory)
+    elif model == "Bloomz-1b7":
+        approach = Bloomz1b7(csv_file_path, output_directory)
+    elif model == "Bloomz-3b":
+        approach = Bloomz3b(csv_file_path, output_directory)
+    elif model == "Bloomz-7b1":
+        approach = Bloomz7b1(csv_file_path, output_directory)
+    elif model == "CodeLlama-7b":
+        approach = CodeLlama7b(csv_file_path, output_directory)
+    elif model == "CodeLlama-13b":
+        approach = CodeLlama13b(csv_file_path, output_directory)
+    elif model == "CodeBERTaTextGeneration":
+        approach = CodeBERTaTextGeneration(csv_file_path, output_directory)
+    elif model == "CodeBERTaFillMask":
+        approach = CodeBERTaFillMask(csv_file_path, output_directory)
     else:
         print("Model not recognized.")
         print(avail_model_text)

@@ -6,7 +6,7 @@ from peft import PeftConfig, PeftModel
 
 
 class CodeMaintainabilityEvaluator:
-    def __init__(self, name, model, tokenizer, csv_file_path, output_directory, use_chunks):
+    def __init__(self, name, model, tokenizer, csv_file_path, output_directory, max_input_size):
         self.name = name
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.tokenizer = tokenizer
@@ -14,17 +14,18 @@ class CodeMaintainabilityEvaluator:
             self.tokenizer.pad_token = self.tokenizer.eos_token
         self.model = model.to(self.device)
         self.model.eval()
-        self.max_length = getattr(self.model.config, 'max_position_embeddings', 4096) - 6  # space for special tokens
+        # Unfortunately, the naming convention for the maximum input sequence length of the models is not consistent,
+        # so the size needs to be retrieved manually from the config.json file of the model and set this way
+        # Subtract 6 to leave space for special tokens
+        self.max_length = max_input_size - 6
         self.csv_file_path = csv_file_path
         self.output_directory = output_directory
-        self.use_chunks = use_chunks
         self.loss_fn = torch.nn.CrossEntropyLoss()
 
     def print_model_info(self):
         print(f"Name: {self.name}")
         print(f"Model Name: {self.model.__class__.__name__}")
         print(f"Device: {self.model.device}")
-        print(f"Chunking: {self.use_chunks}")
 
     def evaluate_model_loss(self, code):
         inputs = self.tokenizer(code, return_tensors='pt', truncation=True).to(self.device)
@@ -39,19 +40,13 @@ class CodeMaintainabilityEvaluator:
     def evaluate_cross_entropy_loss(self, code):
         raise Exception("evaluate_cross_entropy_loss needs to be implemented.")
 
-    def evaluate_cross_entropy_loss_chunked(self, code):
-        raise Exception("evaluate_cross_entropy_loss_chunked needs to be implemented.")
-
     def evaluate_file(self, file_path):
         with open(file_path, 'r', encoding='ISO-8859-1') as f:
             code = f.read()
 
         code = preprocess_java_code(code)
 
-        if self.use_chunks:
-            return self.evaluate_cross_entropy_loss_chunked(code)
-        else:
-            return self.evaluate_cross_entropy_loss(code)
+        return self.evaluate_cross_entropy_loss(code)
 
     def evaluate_files(self):
         print("====================================")
@@ -76,7 +71,7 @@ class CodeMaintainabilityEvaluator:
 
 class CodeMaintainabilityEvaluatorTextGeneration(CodeMaintainabilityEvaluator):
 
-    def evaluate_cross_entropy_loss_chunked(self, code):
+    def evaluate_cross_entropy_loss(self, code):
         # The following code is adapted from https://github.com/simonzachau/SWQD-predict-software-maintainability
         # Tokenize to get tokens
         tokens = self.tokenizer.tokenize(code)
@@ -120,29 +115,10 @@ class CodeMaintainabilityEvaluatorTextGeneration(CodeMaintainabilityEvaluator):
         avg_loss = total_loss / total_number_of_tokens
         return avg_loss
 
-    def evaluate_cross_entropy_loss(self, code):
-        inputs = self.tokenizer(code, return_tensors='pt', truncation=True).to(self.device)
-        input_ids = inputs['input_ids']
-
-        with torch.no_grad():
-            logits = self.model(input_ids).logits
-
-        # Since CrossEntropyLoss expects labels and not encodings,
-        # we use the actual input_ids as labels
-        # The model's prediction is offset by one position,
-        # hence we exclude the last prediction and the first actual token from comparison
-        labels_shifted = input_ids[:, 1:].squeeze()
-        logits = logits[:, :-1, :].squeeze()
-
-        # Compute the loss
-        loss = self.loss_fn(logits, labels_shifted).item()
-
-        return loss
-
 
 class CodeMaintainabilityEvaluatorFillMask(CodeMaintainabilityEvaluator):
 
-    def evaluate_cross_entropy_loss_chunked(self, code):
+    def evaluate_cross_entropy_loss(self, code):
         total_loss = 0.0
 
         # Tokenize the input code
@@ -196,91 +172,115 @@ class CodeMaintainabilityEvaluatorFillMask(CodeMaintainabilityEvaluator):
         average_loss = total_loss / num_chunks
         return average_loss
 
-    def evaluate_cross_entropy_loss(self, code):
-        total_loss = 0.0
-        tokenized_input = self.tokenizer.tokenize(code)
-        for i in range(len(tokenized_input)):
-            # Create a copy of the tokens and mask the token at position i
-            masked_input = tokenized_input.copy()
-            masked_input[i] = self.tokenizer.mask_token
 
-            inputs = self.tokenizer.encode_plus(
-                masked_input,
-                return_tensors='pt',
-                truncation=True,
-                padding=True
-            ).to(self.device)
-            with torch.no_grad():
-                logits = self.model(**inputs).logits
+##################################
+##### Text Generation Models #####
+##################################
 
-            # Masked token's position will be where the mask token is located
-            mask_position = i
-
-            # Predicted logits for the mask position
-            mask_logits = logits[0, mask_position, :]
-
-            # True label
-            true_label = self.tokenizer.convert_tokens_to_ids(tokenized_input[i])
-            true_label = torch.tensor(true_label).unsqueeze(0).to(self.device)
-
-            print(mask_logits.unsqueeze(0))
-            print(true_label)
-            # Compute loss
-            loss = self.loss_fn(mask_logits.unsqueeze(0), true_label)
-            total_loss += loss.item()
-
-        average_loss = total_loss / len(tokenized_input)
-        return average_loss
-
-
-### Text Generation Models ###
+######################
+## GPT-based Models ##
+######################
 class GPT2(CodeMaintainabilityEvaluatorTextGeneration):
-    def __init__(self, csv_file_path, output_directory, use_chunks):
+    def __init__(self, csv_file_path, output_directory):
         model = AutoModelForCausalLM.from_pretrained('gpt2-xl')
         tokenizer = AutoTokenizer.from_pretrained('gpt2-xl')
-        super().__init__('GPT-2', model, tokenizer, csv_file_path, output_directory, use_chunks)
-
-
-class Bloomz560m(CodeMaintainabilityEvaluatorTextGeneration):
-    def __init__(self, csv_file_path, output_directory, use_chunks):
-        model = AutoModelForCausalLM.from_pretrained('bigscience/bloomz-560m')
-        tokenizer = AutoTokenizer.from_pretrained('bigscience/bloomz-560m')
-        super().__init__('Bloomz-560m', model, tokenizer, csv_file_path, output_directory, use_chunks)
-
-
-class CodeBERTaTextGeneration(CodeMaintainabilityEvaluatorTextGeneration):
-    def __init__(self, csv_file_path, output_directory, use_chunks):
-        model = AutoModelForCausalLM.from_pretrained('huggingface/CodeBERTa-small-v1', is_decoder=True)
-        tokenizer = AutoTokenizer.from_pretrained('huggingface/CodeBERTa-small-v1')
-        super().__init__('CodeBERTaTextGeneration', model, tokenizer, csv_file_path, output_directory, use_chunks)
+        super().__init__('GPT-2', model, tokenizer, csv_file_path, output_directory, 1024)
 
 
 class CodeGPTSmallJava(CodeMaintainabilityEvaluatorTextGeneration):
-    def __init__(self, csv_file_path, output_directory, use_chunks):
+    def __init__(self, csv_file_path, output_directory):
         model = AutoModelForCausalLM.from_pretrained('microsoft/CodeGPT-small-java-adaptedGPT2')
         tokenizer = AutoTokenizer.from_pretrained('microsoft/CodeGPT-small-java-adaptedGPT2')
-        super().__init__('CodeGPT-small-java', model, tokenizer, csv_file_path, output_directory, use_chunks)
+        super().__init__('CodeGPT-small-java', model, tokenizer, csv_file_path, output_directory, 1024)
+
+
+class CodeGPTJava(CodeMaintainabilityEvaluatorTextGeneration):
+    def __init__(self, csv_file_path, output_directory):
+        tokenizer = AutoTokenizer.from_pretrained("thmk/codegpt-java-10.2")
+        model = AutoModelForCausalLM.from_pretrained("thmk/codegpt-java-10.2")
+        super().__init__('CodeGPT-java-10.2', model, tokenizer, csv_file_path, output_directory, 1024)
 
 
 class Codegen350m(CodeMaintainabilityEvaluatorTextGeneration):
-    def __init__(self, csv_file_path, output_directory, use_chunks):
+    def __init__(self, csv_file_path, output_directory):
         peft_config = PeftConfig.from_pretrained("ammarnasr/codegen-350M-mono-java")
         model = AutoModelForCausalLM.from_pretrained(peft_config.base_model_name_or_path)
         model = PeftModel.from_pretrained(model, "ammarnasr/codegen-350M-mono-java")
         tokenizer = AutoTokenizer.from_pretrained(peft_config.base_model_name_or_path)
-        super().__init__('codegen-350m-mono-java', model, tokenizer, csv_file_path, output_directory, use_chunks)
+        super().__init__('codegen-350m-mono-java', model, tokenizer, csv_file_path, output_directory, 1024)
 
 
-class CodeGPTJava(CodeMaintainabilityEvaluatorTextGeneration):
-    def __init__(self, csv_file_path, output_directory, use_chunks):
-        tokenizer = AutoTokenizer.from_pretrained("thmk/codegpt-java-10.2")
-        model = AutoModelForCausalLM.from_pretrained("thmk/codegpt-java-10.2")
-        super().__init__('CodeGPT-java-10.2', model, tokenizer, csv_file_path, output_directory, use_chunks)
+class Bloomz560m(CodeMaintainabilityEvaluatorTextGeneration):
+    def __init__(self, csv_file_path, output_directory):
+        model = AutoModelForCausalLM.from_pretrained('bigscience/bloomz-560m')
+        tokenizer = AutoTokenizer.from_pretrained('bigscience/bloomz-560m')
+        super().__init__('Bloomz-560m', model, tokenizer, csv_file_path, output_directory, 1024)
 
 
-### Fill Mask Models ###
+class Bloomz1b1(CodeMaintainabilityEvaluatorTextGeneration):
+    def __init__(self, csv_file_path, output_directory):
+        model = AutoModelForCausalLM.from_pretrained('bigscience/bloomz-1b1')
+        tokenizer = AutoTokenizer.from_pretrained('bigscience/bloomz-1b1')
+        super().__init__('Bloomz-1b1', model, tokenizer, csv_file_path, output_directory, 1536)
+
+
+class Bloomz1b7(CodeMaintainabilityEvaluatorTextGeneration):
+    def __init__(self, csv_file_path, output_directory):
+        model = AutoModelForCausalLM.from_pretrained('bigscience/bloomz-1b7')
+        tokenizer = AutoTokenizer.from_pretrained('bigscience/bloomz-1b7')
+        super().__init__('Bloomz-1b7', model, tokenizer, csv_file_path, output_directory, 2048)
+
+
+class Bloomz3b(CodeMaintainabilityEvaluatorTextGeneration):
+    def __init__(self, csv_file_path, output_directory):
+        model = AutoModelForCausalLM.from_pretrained('bigscience/bloomz-3b')
+        tokenizer = AutoTokenizer.from_pretrained('bigscience/bloomz-3b')
+        super().__init__('Bloomz-3b', model, tokenizer, csv_file_path, output_directory, 2560)
+
+
+class Bloomz7b1(CodeMaintainabilityEvaluatorTextGeneration):
+    def __init__(self, csv_file_path, output_directory):
+        model = AutoModelForCausalLM.from_pretrained('bigscience/bloomz-7b1')
+        tokenizer = AutoTokenizer.from_pretrained('bigscience/bloomz-7b1')
+        super().__init__('Bloomz-1b1', model, tokenizer, csv_file_path, output_directory, 4096)
+
+
+########################
+## Llama-based Models ##
+########################
+class CodeLlama7b(CodeMaintainabilityEvaluatorTextGeneration):
+    def __init__(self, csv_file_path, output_directory):
+        model = AutoModelForCausalLM.from_pretrained('codellama/CodeLlama-7b-hf')
+        tokenizer = AutoTokenizer.from_pretrained('codellama/CodeLlama-7b-hf')
+        super().__init__('CodeLlama-7b-hf', model, tokenizer, csv_file_path, output_directory, 16384)
+
+
+class CodeLlama13b(CodeMaintainabilityEvaluatorTextGeneration):
+    def __init__(self, csv_file_path, output_directory):
+        model = AutoModelForCausalLM.from_pretrained('codellama/CodeLlama-13b-hf')
+        tokenizer = AutoTokenizer.from_pretrained('codellama/CodeLlama-13b-hf')
+        super().__init__('CodeLlama-13b-hf', model, tokenizer, csv_file_path, output_directory, 16384)
+
+
+#######################
+## BERT-based Models ##
+#######################
+class CodeBERTaTextGeneration(CodeMaintainabilityEvaluatorTextGeneration):
+    def __init__(self, csv_file_path, output_directory):
+        model = AutoModelForCausalLM.from_pretrained('huggingface/CodeBERTa-small-v1', is_decoder=True)
+        tokenizer = AutoTokenizer.from_pretrained('huggingface/CodeBERTa-small-v1')
+        super().__init__('CodeBERTaTextGeneration', model, tokenizer, csv_file_path, output_directory, 514)
+
+
+############################
+##### Fill Mask Models #####
+############################
+
+#######################
+## BERT-based Models ##
+#######################
 class CodeBERTaFillMask(CodeMaintainabilityEvaluatorFillMask):
-    def __init__(self, csv_file_path, output_directory, use_chunks):
+    def __init__(self, csv_file_path, output_directory):
         model = AutoModelForMaskedLM.from_pretrained('huggingface/CodeBERTa-small-v1')
         tokenizer = AutoTokenizer.from_pretrained('huggingface/CodeBERTa-small-v1')
-        super().__init__('CodeBERTaFillMask', model, tokenizer, csv_file_path, output_directory, use_chunks)
+        super().__init__('CodeBERTaFillMask', model, tokenizer, csv_file_path, output_directory, 1024)
