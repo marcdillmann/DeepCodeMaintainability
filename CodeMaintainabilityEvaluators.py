@@ -177,13 +177,31 @@ class CodeMaintainabilityEvaluatorFillMask(CodeMaintainabilityEvaluator):
 ######################
 ## GPT-based Models ##
 ######################
-class GPT2(CodeMaintainabilityEvaluatorTextGeneration):
+class GPT2Medium(CodeMaintainabilityEvaluatorTextGeneration):
+    def __init__(self, csv_file_path, output_directory):
+        model_string = 'gpt2-medium'
+        max_input_size = 1024
+        model = AutoModelForCausalLM.from_pretrained(model_string)
+        tokenizer = AutoTokenizer.from_pretrained(model_string)
+        super().__init__('gpt2-medium', model, tokenizer, csv_file_path, output_directory, max_input_size)
+
+
+class GPT2Large(CodeMaintainabilityEvaluatorTextGeneration):
+    def __init__(self, csv_file_path, output_directory):
+        model_string = 'gpt2-large'
+        max_input_size = 1024
+        model = AutoModelForCausalLM.from_pretrained(model_string)
+        tokenizer = AutoTokenizer.from_pretrained(model_string)
+        super().__init__('gpt2-large', model, tokenizer, csv_file_path, output_directory, max_input_size)
+
+
+class GPT2XL(CodeMaintainabilityEvaluatorTextGeneration):
     def __init__(self, csv_file_path, output_directory):
         model_string = 'gpt2-xl'
         max_input_size = 1024
         model = AutoModelForCausalLM.from_pretrained(model_string)
         tokenizer = AutoTokenizer.from_pretrained(model_string)
-        super().__init__('GPT-2', model, tokenizer, csv_file_path, output_directory, max_input_size)
+        super().__init__('gpt2-xl', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 class CodeGPTSmallJava(CodeMaintainabilityEvaluatorTextGeneration):

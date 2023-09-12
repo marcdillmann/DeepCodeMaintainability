@@ -25,7 +25,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-To use the CodeLlama, please make sure to install transformers from main, because they are not yet included in the current pip transformers version:
+To use the CodeLlama Models, please make sure to install transformers from main, because they are not yet included in the current pip transformers version:
 ```
 pip install git+https://github.com/huggingface/transformers.git@main accelerate
 ```
@@ -39,7 +39,9 @@ Run the main script:
 python main.py <model_name>
 ```
 Currently supported model names:
-- GPT-2
+- gpt2-medium
+- gpt2-large
+- gpt2-xl
 - CodeGPTSmallJava
 - CodeGPTJava
 - Codegen350m
