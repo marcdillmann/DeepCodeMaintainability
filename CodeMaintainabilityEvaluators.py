@@ -177,31 +177,13 @@ class CodeMaintainabilityEvaluatorFillMask(CodeMaintainabilityEvaluator):
 ######################
 ## GPT-based Models ##
 ######################
-class GPT2Medium(CodeMaintainabilityEvaluatorTextGeneration):
+class GPT2JavaFineTuned(CodeMaintainabilityEvaluatorTextGeneration):
     def __init__(self, csv_file_path, output_directory):
-        model_string = 'gpt2-medium'
+        model_string = './gpt2_java_finetuned'
         max_input_size = 1024
         model = AutoModelForCausalLM.from_pretrained(model_string)
         tokenizer = AutoTokenizer.from_pretrained(model_string)
-        super().__init__('gpt2-medium', model, tokenizer, csv_file_path, output_directory, max_input_size)
-
-
-class GPT2Large(CodeMaintainabilityEvaluatorTextGeneration):
-    def __init__(self, csv_file_path, output_directory):
-        model_string = 'gpt2-large'
-        max_input_size = 1024
-        model = AutoModelForCausalLM.from_pretrained(model_string)
-        tokenizer = AutoTokenizer.from_pretrained(model_string)
-        super().__init__('gpt2-large', model, tokenizer, csv_file_path, output_directory, max_input_size)
-
-
-class GPT2XL(CodeMaintainabilityEvaluatorTextGeneration):
-    def __init__(self, csv_file_path, output_directory):
-        model_string = 'gpt2-xl'
-        max_input_size = 1024
-        model = AutoModelForCausalLM.from_pretrained(model_string)
-        tokenizer = AutoTokenizer.from_pretrained(model_string)
-        super().__init__('gpt2-xl', model, tokenizer, csv_file_path, output_directory, max_input_size)
+        super().__init__('gpt2_java_finetuned', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
 class CodeGPTSmallJava(CodeMaintainabilityEvaluatorTextGeneration):
@@ -299,25 +281,9 @@ class CodeLlama13b(CodeMaintainabilityEvaluatorTextGeneration):
         super().__init__('CodeLlama-13b-hf', model, tokenizer, csv_file_path, output_directory, max_input_size)
 
 
-#######################
-## BERT-based Models ##
-#######################
-class CodeBERTaTextGeneration(CodeMaintainabilityEvaluatorTextGeneration):
-    def __init__(self, csv_file_path, output_directory):
-        model_string = 'huggingface/CodeBERTa-small-v1'
-        max_input_size = 514
-        model = AutoModelForCausalLM.from_pretrained(model_string, is_decoder=True)
-        tokenizer = AutoTokenizer.from_pretrained(model_string)
-        super().__init__('CodeBERTaTextGeneration', model, tokenizer, csv_file_path, output_directory, max_input_size)
-
-
 ############################
 ##### Fill Mask Models #####
 ############################
-
-#######################
-## BERT-based Models ##
-#######################
 class CodeBERTaFillMask(CodeMaintainabilityEvaluatorFillMask):
     def __init__(self, csv_file_path, output_directory):
         model_string = 'huggingface/CodeBERTa-small-v1'

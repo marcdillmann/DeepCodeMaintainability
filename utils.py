@@ -37,37 +37,36 @@ def read_csv(csv_file_path):
 
         # readability
         readability = row['readability']
-        number_strings = readability.replace('{', '').replace('}', '').split(',')
+        number_strings = readability.strip("{}").split(',')
         probabilities = list(map(float, number_strings))
         readability_probabilities.append(probabilities)
 
         # understandability
         understandability = row['understandability']
-        number_strings = understandability.replace('{', '').replace('}', '').split(',')
+        number_strings = understandability.strip("{}").split(',')
         probabilities = list(map(float, number_strings))
         understandability_probabilities.append(probabilities)
 
         # complexity
         complexity = row['complexity']
-        number_strings = complexity.replace('{', '').replace('}', '').split(',')
+        number_strings = complexity.strip("{}").split(',')
         probabilities = list(map(float, number_strings))
         complexity_probabilities.append(probabilities)
 
         # modularization
         modularization = row['modularization']
-        number_strings = modularization.replace('{', '').replace('}', '').split(',')
+        number_strings = modularization.strip("{}").split(',')
         probabilities = list(map(float, number_strings))
         modularization_probabilities.append(probabilities)
 
         # overall
         overall = row['overall']
-        number_strings = overall.replace('{', '').replace('}', '').split(',')
+        number_strings = overall.strip("{}").split(',')
         probabilities = list(map(float, number_strings))
         overall_probabilities.append(probabilities)
         index = np.argmax(probabilities)
         overall_highest_probability_index.append(index)
-        overall_binary = False if index == 0 else True
-        #overall_binary = False if index == 0 or index == 1 else True
+        overall_binary = convert_to_binary(probabilities, 'overall')
         overall_binary_classifications.append(overall_binary)
 
     results = {
@@ -123,3 +122,11 @@ def write_csv(csv_data, cross_entropies, output_directory, model_name):
 # Source: https://www.geeksforgeeks.org/break-list-chunks-size-n-python/
 def split_into_chunks(l, n):
     return [l[i * n:(i + 1) * n] for i in range((len(l) + n - 1) // n)]
+
+
+def convert_to_binary(probabilities, characteristic):
+    # Adapted from https://github.com/simonzachau/SWQD-predict-software-maintainability
+    index = np.argmax(probabilities)
+    agree_indices = [0, 1, 2] if characteristic == 'Complexity' or characteristic == 'Modularization' else [0]
+    binary = False if index in agree_indices else True
+    return binary

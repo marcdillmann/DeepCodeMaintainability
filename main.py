@@ -1,7 +1,7 @@
 import sys
-from CodeMaintainabilityEvaluators import (GPT2Medium, GPT2Large, GPT2XL, CodeGPTSmallJava, CodeGPTJava, Codegen350m,
-                                           Bloomz560m, Bloomz1b1, Bloomz1b7, Bloomz3b, Bloomz7b1, CodeLlama7b,
-                                           CodeLlama13b, CodeBERTaTextGeneration, CodeBERTaFillMask)
+from CodeMaintainabilityEvaluators import (GPT2JavaFineTuned, CodeGPTSmallJava, CodeGPTJava, Codegen350m, Bloomz560m,
+                                           Bloomz1b1, Bloomz1b7, Bloomz3b, Bloomz7b1, CodeLlama7b, CodeLlama13b,
+                                           CodeBERTaFillMask)
 
 
 # Definitions
@@ -9,9 +9,8 @@ csv_file_path = 'dataset/labels.csv'
 output_directory = 'output'
 
 avail_model_text = \
-    ("Available models: gpt2-medium, gpt2-large, gpt2-xl, CodeGPTSmallJava, CodeGPTJava, Codegen350m, Bloomz-560m, "
-     "Bloomz-1b1, Bloomz-1b7, Bloomz-3b, Bloomz-7b1, CodeLlama-7b, CodeLlama-13b, CodeBERTaTextGeneration, "
-     "CodeBERTaFillMask")
+    ("Available models: CodeGPTSmallJava, CodeGPTJava, Codegen350m, Bloomz-560m, Bloomz-1b1, Bloomz-1b7,"
+     "Bloomz-3b, Bloomz-7b1, CodeLlama-7b, CodeLlama-13b, CodeBERTaFillMask")
 
 
 if __name__ == '__main__':
@@ -24,12 +23,8 @@ if __name__ == '__main__':
 
     model = sys.argv[1]
 
-    if model == "gpt2-medium":
-        approach = GPT2Medium(csv_file_path, output_directory)
-    elif model == "gpt2-large":
-        approach = GPT2Large(csv_file_path, output_directory)
-    elif model == "gpt2-xl":
-        approach = GPT2XL(csv_file_path, output_directory)
+    if model == "gpt2_java_finetuned":
+        approach = GPT2JavaFineTuned(csv_file_path, output_directory)
     elif model == "CodeGPTSmallJava":
         approach = CodeGPTSmallJava(csv_file_path, output_directory)
     elif model == "CodeGPTJava":
@@ -50,8 +45,6 @@ if __name__ == '__main__':
         approach = CodeLlama7b(csv_file_path, output_directory)
     elif model == "CodeLlama-13b":
         approach = CodeLlama13b(csv_file_path, output_directory)
-    elif model == "CodeBERTaTextGeneration":
-        approach = CodeBERTaTextGeneration(csv_file_path, output_directory)
     elif model == "CodeBERTaFillMask":
         approach = CodeBERTaFillMask(csv_file_path, output_directory)
     else:

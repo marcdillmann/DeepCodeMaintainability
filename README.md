@@ -30,8 +30,6 @@ To use the CodeLlama Models, please make sure to install transformers from main,
 pip install git+https://github.com/huggingface/transformers.git@main accelerate
 ```
 
-
-
 ## Usage
 
 Run the main script:
@@ -39,9 +37,6 @@ Run the main script:
 python main.py <model_name>
 ```
 Currently supported model names:
-- gpt2-medium
-- gpt2-large
-- gpt2-xl
 - CodeGPTSmallJava
 - CodeGPTJava
 - Codegen350m
@@ -52,8 +47,6 @@ Currently supported model names:
 - Bloomz-7b1
 - CodeLlama-7b
 - CodeLlama-13b
-- CodeBERTaTextGeneration
-- CodeBERTaFillMask
 
 Once completed, check the output directory (or your specified directory) for the generated CSV report, which has the format 'Evaluation_modelname_timestamp'.
 
