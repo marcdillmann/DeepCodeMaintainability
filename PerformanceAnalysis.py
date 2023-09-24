@@ -1,6 +1,8 @@
 import os
 import sys
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, accuracy_score, classification_report, roc_auc_score
@@ -29,7 +31,7 @@ def compute_spearman_rank_correlation(csv_file_path, characteristic):
     }
 
 
-def compute_regression_metrics(csv_file_path, characteristic):
+def compute_regression_metrics(csv_file_path, characteristic, model_name):
     df = pd.read_csv(csv_file_path)
     df['Avg_Likert'] = df[characteristic].apply(extract_avg_likert_score)
 
@@ -50,17 +52,46 @@ def compute_regression_metrics(csv_file_path, characteristic):
     regressor.fit(x_train, y_train)
 
     # Predict
-    y_pred = regressor.predict(x_test)
+    y_pred_test = regressor.predict(x_test)
+    y_pred_train = regressor.predict(x_train)
 
     # Evaluate
-    mse = mean_squared_error(y_test, y_pred)
+    mse = mean_squared_error(y_test, y_pred_test)
+
+    # Plot
+    x_train_unscaled = scaler.inverse_transform(x_train)
+    plot_linear_regression(df, x_train_unscaled, y_pred_train, model_name, characteristic)
 
     return {
         "Mean Squared Error For Regression": round(mse, 4)
     }
 
 
-def compute_binary_metrics(csv_file_path, characteristic):
+def plot_linear_regression(df, x, y, model_name, characteristic):
+    # Plotting
+    plt.figure(figsize=(10, 6))
+
+    # Scatter plot
+    plt.scatter(df['Cross-Entropy'], df['Avg_Likert'], alpha=0.6)
+
+    # Regression line
+    plt.plot(x, y, color='red', label='Regression Line')
+
+    # Titles and labels
+    plt.title("Linear Regression Visualization")
+    plt.xlabel("Cross-Entropy")
+    plt.ylabel("Average Likert Score")
+    plt.grid(True)
+    plt.tight_layout()
+
+    output_path = f"plots/{characteristic}/LinearRegression/{model_name}.png"
+    # Save the plot
+    plt.savefig(output_path, format='png', dpi=300)
+
+    plt.close()
+
+
+def compute_binary_metrics(csv_file_path, characteristic, model_name):
     df = pd.read_csv(csv_file_path)
 
     binary_classifications = []
@@ -93,7 +124,8 @@ def compute_binary_metrics(csv_file_path, characteristic):
     y_pred = classifier.predict(x_test)
 
     # Predict probabilities for AUC
-    y_pred_prob = classifier.predict_proba(x_test)[:, 1]
+    y_test_prob = classifier.predict_proba(x_test)[:, 1]
+    y_train_prob = classifier.predict_proba(x_train)[:, 1]
 
     # Evaluate
     accuracy = accuracy_score(y_test, y_pred)
@@ -103,10 +135,16 @@ def compute_binary_metrics(csv_file_path, characteristic):
     recall_false = classification_report(y_test, y_pred, output_dict=True)['False']['recall']
     f1_true = classification_report(y_test, y_pred, output_dict=True)['True']['f1-score']
     f1_false = classification_report(y_test, y_pred, output_dict=True)['False']['f1-score']
-    auc = roc_auc_score(y_test, y_pred_prob)
+    auc = roc_auc_score(y_test, y_test_prob)
 
     # Compute decision boundary
     decision_boundary = get_logistic_regression_decision_boundary(classifier, scaler)
+
+    # Plot
+    x_train_unscaled = scaler.inverse_transform(x_train)
+    x_test_unscaled = scaler.inverse_transform(x_test)
+    coef = classifier.coef_[0][0]
+    plot_logistic_regression(df, x_train_unscaled, y_train_prob, x_test_unscaled, y_test_prob, decision_boundary, coef, model_name, characteristic)
 
     return {
         "Accuracy": round(accuracy, 2),
@@ -135,6 +173,42 @@ def get_logistic_regression_decision_boundary(clf, scaler):
     return decision_boundary
 
 
+def plot_logistic_regression(df, x_train, y_train_prob, x_test, y_test_prob, decision_boundary, coef, model_name, characteristic):
+
+    plt.figure(figsize=(10, 6))
+
+    # Determine colors for regions
+    left_color = 'red' if coef > 0 else 'green'
+    right_color = 'green' if coef > 0 else 'red'
+
+    # Color the regions
+    plt.fill_between([min(x_train)[0], decision_boundary], 0, 1, color=left_color, alpha=0.2,
+                     label=f"Predicted {'False' if coef > 0 else 'True'}")
+    plt.fill_between([decision_boundary, max(x_train)[0]], 0, 1, color=right_color, alpha=0.2,
+                     label=f"Predicted {'True' if coef > 0 else 'False'}")
+
+    # Scatter plot of training data probabilities
+    plt.scatter(x_train, y_train_prob, color='blue', alpha=0.5)
+
+    # Scatter plot of testing data probabilities
+    plt.scatter(x_test, y_test_prob, color='blue', alpha=0.5)
+
+    # Decision boundary
+    plt.axvline(x=decision_boundary, color='black', linestyle='--', label='Decision Boundary')
+
+    plt.title('Logistic Regression Probability Visualization')
+    plt.xlabel('Cross-Entropy')
+    plt.ylabel('Predicted Probability')
+    plt.legend()
+    plt.tight_layout()
+
+    output_path = f"plots/{characteristic}/LogisticRegression/{model_name}.png"
+    # Save the plot
+    plt.savefig(output_path, format='png', dpi=300)
+
+    plt.close()
+
+
 def generate_characteristic_results(directory_path, characteristic):
     all_files = [f for f in os.listdir(directory_path) if os.path.isfile(os.path.join(directory_path, f))]
 
@@ -143,12 +217,12 @@ def generate_characteristic_results(directory_path, characteristic):
     for file in all_files:
         csv_file_path = os.path.join(directory_path, file)
         try:
-            spearman_results = compute_spearman_rank_correlation(csv_file_path, characteristic)
-            regression_results = compute_regression_metrics(csv_file_path, characteristic)
-            binary_results = compute_binary_metrics(csv_file_path, characteristic)
-
             model_name = file.split('_')[1]
             max_tokens = file.split('_')[2].replace('.csv', '')
+
+            spearman_results = compute_spearman_rank_correlation(csv_file_path, characteristic)
+            regression_results = compute_regression_metrics(csv_file_path, characteristic, model_name)
+            binary_results = compute_binary_metrics(csv_file_path, characteristic, model_name)
 
             combined_results = {
                 "Model": model_name,
