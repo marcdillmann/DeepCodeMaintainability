@@ -56,7 +56,7 @@ To extend the program to use models other than the ones currently implemented, c
 The existing models can be used as a template. Then add it to 'main.py', similar to the already supported models.
 
 ## Performance Measurement
-Evaluating the effectiveness of our models is an important part. We use a variety of metrics to measure the performance of our models on the code maintainability assessment task.
+Evaluating the effectiveness of the models is an important part. We use a variety of metrics to measure the performance of the models on the code maintainability assessment task.
 
 ### Regression Metrics:
 Mean Squared Error (MSE): Measures the average of the squares of the errors or deviations.

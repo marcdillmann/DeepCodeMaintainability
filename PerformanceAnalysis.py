@@ -18,7 +18,7 @@ def extract_avg_likert_score(likert_string):
 
 
 def compute_spearman_rank_correlation(csv_file_path, characteristic):
-    # Load the CSV data into a pandas DataFrame
+    # Load the csv data
     df = pd.read_csv(csv_file_path)
     df['Avg_Likert'] = df[characteristic].apply(extract_avg_likert_score)
 
@@ -78,7 +78,7 @@ def plot_linear_regression(df, x, y, model_name, characteristic):
     plt.plot(x, y, color='red', label='Regression Line')
 
     # Titles and labels
-    plt.title("Linear Regression Visualization")
+    plt.title(f"Linear Regression {model_name} {characteristic}")
     plt.xlabel("Cross-Entropy")
     plt.ylabel("Average Likert Score")
     plt.grid(True)
@@ -93,6 +93,7 @@ def plot_linear_regression(df, x, y, model_name, characteristic):
 
 def compute_binary_metrics(csv_file_path, characteristic, model_name):
     df = pd.read_csv(csv_file_path)
+    df['Avg_Likert'] = df[characteristic].apply(extract_avg_likert_score)
 
     binary_classifications = []
     for _, row in df.iterrows():
@@ -121,20 +122,19 @@ def compute_binary_metrics(csv_file_path, characteristic, model_name):
     classifier.fit(x_train, y_train)
 
     # Predict
-    y_pred = classifier.predict(x_test)
+    y_binary_pred = classifier.predict(x_test)
 
     # Predict probabilities for AUC
     y_test_prob = classifier.predict_proba(x_test)[:, 1]
-    y_train_prob = classifier.predict_proba(x_train)[:, 1]
 
     # Evaluate
-    accuracy = accuracy_score(y_test, y_pred)
-    precision_true = classification_report(y_test, y_pred, output_dict=True)['True']['precision']
-    precision_false = classification_report(y_test, y_pred, output_dict=True)['False']['precision']
-    recall_true = classification_report(y_test, y_pred, output_dict=True)['True']['recall']
-    recall_false = classification_report(y_test, y_pred, output_dict=True)['False']['recall']
-    f1_true = classification_report(y_test, y_pred, output_dict=True)['True']['f1-score']
-    f1_false = classification_report(y_test, y_pred, output_dict=True)['False']['f1-score']
+    accuracy = accuracy_score(y_test, y_binary_pred)
+    precision_true = classification_report(y_test, y_binary_pred, output_dict=True)['True']['precision']
+    precision_false = classification_report(y_test, y_binary_pred, output_dict=True)['False']['precision']
+    recall_true = classification_report(y_test, y_binary_pred, output_dict=True)['True']['recall']
+    recall_false = classification_report(y_test, y_binary_pred, output_dict=True)['False']['recall']
+    f1_true = classification_report(y_test, y_binary_pred, output_dict=True)['True']['f1-score']
+    f1_false = classification_report(y_test, y_binary_pred, output_dict=True)['False']['f1-score']
     auc = roc_auc_score(y_test, y_test_prob)
 
     # Compute decision boundary
@@ -142,9 +142,8 @@ def compute_binary_metrics(csv_file_path, characteristic, model_name):
 
     # Plot
     x_train_unscaled = scaler.inverse_transform(x_train)
-    x_test_unscaled = scaler.inverse_transform(x_test)
     coef = classifier.coef_[0][0]
-    plot_logistic_regression(df, x_train_unscaled, y_train_prob, x_test_unscaled, y_test_prob, decision_boundary, coef, model_name, characteristic)
+    plot_logistic_regression(df, x_train_unscaled, decision_boundary, coef, model_name, characteristic)
 
     return {
         "Accuracy": round(accuracy, 2),
@@ -173,7 +172,7 @@ def get_logistic_regression_decision_boundary(clf, scaler):
     return decision_boundary
 
 
-def plot_logistic_regression(df, x_train, y_train_prob, x_test, y_test_prob, decision_boundary, coef, model_name, characteristic):
+def plot_logistic_regression(df, x_train, decision_boundary, coef, model_name, characteristic):
 
     plt.figure(figsize=(10, 6))
 
@@ -181,24 +180,41 @@ def plot_logistic_regression(df, x_train, y_train_prob, x_test, y_test_prob, dec
     left_color = 'red' if coef > 0 else 'green'
     right_color = 'green' if coef > 0 else 'red'
 
-    # Color the regions
-    plt.fill_between([min(x_train)[0], decision_boundary], 0, 1, color=left_color, alpha=0.2,
-                     label=f"Predicted {'False' if coef > 0 else 'True'}")
-    plt.fill_between([decision_boundary, max(x_train)[0]], 0, 1, color=right_color, alpha=0.2,
-                     label=f"Predicted {'True' if coef > 0 else 'False'}")
+    # Color the regions, with correct ordering for the legend
+    if coef > 0:
+        plt.fill_between([decision_boundary, max(x_train)[0]], 0.9, 4.1, color=right_color, alpha=0.2,
+                         label=f"Classifier Prediction: {'Positive' if coef > 0 else 'Negative'}")
+        plt.fill_between([min(x_train)[0], decision_boundary], 0.9, 4.1, color=left_color, alpha=0.2,
+                         label=f"Classifier Prediction: {'Negative' if coef > 0 else 'Positive'}")
+    else:
+        plt.fill_between([min(x_train)[0], decision_boundary], 0.9, 4.1, color=left_color, alpha=0.2,
+                         label=f"Classifier Prediction: {'Negative' if coef > 0 else 'Positive'}")
+        plt.fill_between([decision_boundary, max(x_train)[0]], 0.9, 4.1, color=right_color, alpha=0.2,
+                         label=f"Classifier Prediction: {'Positive' if coef > 0 else 'Negative'}")
 
-    # Scatter plot of training data probabilities
-    plt.scatter(x_train, y_train_prob, color='blue', alpha=0.5)
+    x_pos = []
+    x_neg = []
+    y_pos = []
+    y_neg = []
 
-    # Scatter plot of testing data probabilities
-    plt.scatter(x_test, y_test_prob, color='blue', alpha=0.5)
+    for _, row in df.iterrows():
+        label = row['Characteristic Binary']
+        if label:
+            x_pos.append(row['Cross-Entropy'])
+            y_pos.append(row['Avg_Likert'])
+        else:
+            x_neg.append(row['Cross-Entropy'])
+            y_neg.append(row['Avg_Likert'])
+
+    plt.scatter(x_pos, y_pos, color='green', alpha=1.0, label='Correct Assessment: Positive')
+    plt.scatter(x_neg, y_neg, color='red', alpha=1.0, label='Correct Assessment: Negative')
 
     # Decision boundary
     plt.axvline(x=decision_boundary, color='black', linestyle='--', label='Decision Boundary')
 
-    plt.title('Logistic Regression Probability Visualization')
+    plt.title(f'Logistic Regression {model_name} {characteristic}')
     plt.xlabel('Cross-Entropy')
-    plt.ylabel('Predicted Probability')
+    plt.ylabel("Average Likert Score")
     plt.legend()
     plt.tight_layout()
 
