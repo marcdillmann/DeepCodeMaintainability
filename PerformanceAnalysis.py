@@ -14,7 +14,7 @@ from utils import convert_to_binary
 
 def extract_avg_likert_score(likert_string):
     probabilities = list(map(float, likert_string.strip("{}").split(",")))
-    return sum([(i+1)*prob for i, prob in enumerate(probabilities)])
+    return sum([(4-i)*prob for i, prob in enumerate(probabilities)])
 
 
 def compute_spearman_rank_correlation(csv_file_path, characteristic):

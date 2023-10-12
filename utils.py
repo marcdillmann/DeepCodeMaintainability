@@ -128,5 +128,5 @@ def convert_to_binary(probabilities, characteristic):
     # Adapted from https://github.com/simonzachau/SWQD-predict-software-maintainability
     index = np.argmax(probabilities)
     agree_indices = [0, 1, 2] if characteristic == 'Complexity' or characteristic == 'Modularization' else [0]
-    binary = False if index in agree_indices else True
+    binary = True if index in agree_indices else False
     return binary
